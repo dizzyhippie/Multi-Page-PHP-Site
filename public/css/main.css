@@ -15,10 +15,10 @@ body{
 }
 
 #navigation a{
-    text-decoration: none;
-    color: #000;
-    font-family: sans-serif;
     font-size: 18px;
+    text-decoration: none;
+    font-family: loos-normal, sans-serif;
+    color: #9F5F81;
 }
 
 #about{
