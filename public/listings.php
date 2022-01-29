@@ -1,6 +1,5 @@
 <?php
-include '../includes/functions.php';
-
+//include '../includes/functions.php';
 $projects = [
     [
         'project' => 'Trap Complex',
@@ -65,7 +64,7 @@ $projects = [
                     //open the parent section
                     echo '<section class="pieces">';
                     //Echo h1 with class name for the title
-                    echo '<h1 class="' . $item['p-class'] . '">' . $item['project'] . '</h2>';
+                    echo '<h2 class="' . $item['p-class'] . '">' . $item['project'] . '</h2>';
                     //Echo img with src and class for the image
                     echo '<img class="' . $item['i-class']  . '"src="' . $item['preview'] . '"/>';
                     //close the parent section
