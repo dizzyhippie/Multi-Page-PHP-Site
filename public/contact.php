@@ -32,9 +32,11 @@ $_SESSION['submission'] =[];
         
         <section id="contact">
         <form method="POST" action="../includes/submit.php" id="form">
+            <h2 class="contact-title">Get in Touch!</h2>
             <input type="text" placeholder="First Name" name="first_name" class="input-field" value="<?php echo $firstName; ?>">
             <span class="errors">
                     <?php echo $firstNameError; ?>
+                    <?php echo $firstNameEmpty; ?>
                 </span>
             <br>
             <input type="text" placeholder="Last Name" name="last_name" class="input-field" value="<?php echo $lastName; ?>">
@@ -55,5 +57,6 @@ $_SESSION['submission'] =[];
             <button type="submit" id="send">Submit</button>
         </form>
         </section>
+        <?php include '../includes/partials/footer.php';?>
     </body>
 </html>

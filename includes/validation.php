@@ -6,8 +6,8 @@ function isFieldEmpty($input){
 }
 
 function isFirstNameValid($firstName){
-    //If its empty, DENY
-    if (isFieldEmpty($firstName)){
+     //If its empty, DENY
+     if (isFieldEmpty($firstName)){
         return false;
     }
     //If first name is less than 3 letters, DENY

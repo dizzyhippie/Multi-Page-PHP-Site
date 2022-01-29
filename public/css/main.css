@@ -1,6 +1,9 @@
+/* GLOBAL STYLES */
 body{
     background-color: #EEEEEE;
 }
+
+/* PARTIAL STYLES */
 
 #navigation{
     display: flex;
@@ -18,6 +21,91 @@ body{
     font-size: 18px;
 }
 
+#about{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.pic{
+    display: block;
+    margin: 0 auto;
+}
+
+#footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+}
+
+#footer-navigation{
+    list-style: none;
+}
+
+#footer-navigation li{
+    display: inline-block;
+    padding: 10px;
+}
+
+#footer-navigation a{
+    font-size: 18px;
+    text-decoration: none;
+    font-family: loos-normal, sans-serif;
+    color: #9F5F81;
+}
+
+#name{
+    font-family: loos-normal, sans-serif;
+    color: #9F5F81;
+    margin-left: 50px;
+}
+
+/* PORTFOLIO PAGE STYLING */
+
+.port-title{
+    font-family: loos-normal, sans-serif;
+    color: #9F5F81;
+    text-align: center;
+}
+
+.port-desc{
+    font-family: loos-normal, sans-serif;
+    color: black;
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+}
+
+#gallery{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px 10px;
+}
+
+.pieces{
+    background-color: #9F5F81;
+    margin: 20px;
+}
+
+.header-style{
+    margin-left: 25px;
+    margin-top: 50px;
+    font-family: loos-normal, sans-serif;
+    color: #fff;
+    font-size: 16px;
+    
+}
+
+.image-style{
+    margin-top: 25px;
+}
+
+
+
+
 /* CONTACT PAGE STYLING */
 
 #contact{
@@ -25,8 +113,15 @@ body{
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 150px;
     background-color: white;
+}
+
+.contact-title{
+    text-align: center;
+    color: #9F5F81;
+    font-family: loos-normal, sans-serif;
 }
 
 #form{
@@ -64,4 +159,5 @@ body{
 .errors{
     color: #9F5F81;
     font-family: loos-normal, sans-serif;
+    text-align: center;
 }
