@@ -8,7 +8,6 @@ include 'validation.php';
 $_SESSION['errors'] = [];
 $_SESSION['submission'] = $_POST; //stores inputs incase of error - prevents input form clearing
 
-
 //ensure there is a place for user to be re directed
 if (! array_key_exists('HTTP_REFERER', $_SERVER)) {
     die;
@@ -19,6 +18,7 @@ if (count($_POST) <= 0) {
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     die;
 }
+
 //getPostData gets the inputs and stores them in the variables
 $firstName = getPostData('first_name');
 $lastName = getPostData('last_name');
@@ -26,31 +26,31 @@ $email = getPostData('email');
 $comment = getPostData('comment');
 
 //returns true or false based on if the inputs are valid or not
-$firstNameValid = isFirstNameValid($firstName);
-$lastNameValid = isLastNameValid($lastName);
-$emailValid = isEmailValid($email);
-$commentValid = isCommentValid($comment);
+$firstNameIsValid = isFirstNameValid($firstName);
+$lastNameIsValid = isLastNameValid($lastName);
+$emailIsValid = isEmailValid($email);
+$commentIsValid = isCommentValid($comment);
 
 
 //Display error if not valid for first name, last name and email
-if (! $firstNameValid) {
-    $_SESSION['errors']['first_name'] = 'Please Enter a Valid First Name';
+if (! $firstNameIsValid) {
+    $_SESSION['errors']['first_name'] = 'Please Enter a Longer First Name';
 }
 
-if (! $lastNameValid) {
-    $_SESSION['errors']['last_name'] = 'Please Enter a Valid Last Name';
+if (! $lastNameIsValid) {
+    $_SESSION['errors']['last_name'] = 'Please Enter a Longer Last Name';
 }
 
-if (! $emailValid) {
+if (! $emailIsValid) {
     $_SESSION['errors']['email'] = 'Please Enter a Valid Email';
 }
 
-if (! $commentValid) {
-    $_SESSION['errors']['comment'] = 'Please Enter a Longer Message';
+if (! $commentIsValid) {
+    $_SESSION['errors']['comment'] = 'Please Add More to Your Message';
 }
 
 //if there are any errors - return back to the page
-if (! $firstNameValid || ! $lastNameValid || ! $emailValid || ! $commentValid) {
+if (! $firstNameIsValid || ! $lastNameIsValid || ! $emailIsValid || ! $commentIsValid) {
     //set errors to show to user
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     die;

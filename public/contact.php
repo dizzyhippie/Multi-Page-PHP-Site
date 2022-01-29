@@ -24,36 +24,36 @@ $_SESSION['submission'] =[];
 <html>
     <head>
         <title>Contact Page</title>
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.typekit.net/ghs3lib.css">
     </head>
     <body>
         <?php include '../includes/partials/navigation.php';?>
         
-
-        <form method="POST" action="../includes/submit.php">
-            <input type="text" placeholder="First Name" name="first_name" value="<?php echo $firstName; ?>">
-            <!-- Small bit of css to style errors -->
-            <span style="color: red;">
+        <section id="contact">
+        <form method="POST" action="../includes/submit.php" id="form">
+            <input type="text" placeholder="First Name" name="first_name" class="input-field" value="<?php echo $firstName; ?>">
+            <span class="errors">
                     <?php echo $firstNameError; ?>
                 </span>
             <br>
-            <input type="text" placeholder="Last Name" name="last_name" value="<?php echo $lastName; ?>">
-            <span style="color: red;">
+            <input type="text" placeholder="Last Name" name="last_name" class="input-field" value="<?php echo $lastName; ?>">
+            <span class="errors">
                     <?php echo $lastNameError; ?>
                 </span>
             <br>
-            <input type="text" placeholder="Email" name="email" value="<?php echo $email; ?>">
-            <span style="color: red;">
+            <input type="text" placeholder="Email" name="email" class="input-field" value="<?php echo $email; ?>">
+            <span class="errors">
                     <?php echo $emailError; ?>
                 </span>
             <br>
-            <input name="comment" placeholder="Enter Message Here!" value="<?php echo $comment; ?>"></input>
-            <span style="color: red;">
+            <input name="comment" placeholder="Enter Message Here!" class="input-field comment" value="<?php echo $comment; ?>"></input>
+            <span class="errors">
                     <?php echo $commentError; ?>
                 </span>
             <br>
-            <button type="submit">Submit</button>
+            <button type="submit" id="send">Submit</button>
         </form>
-      
+        </section>
     </body>
 </html>
