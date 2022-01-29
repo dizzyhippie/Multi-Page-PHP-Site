@@ -33,6 +33,7 @@ $commentIsValid = isCommentValid($comment);
 
 
 //Display error if not valid for first name, last name and email
+
 if (! $firstNameIsValid) {
     $_SESSION['errors']['first_name'] = 'Please Enter a Longer First Name';
 }
