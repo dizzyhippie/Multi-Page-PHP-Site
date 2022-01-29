@@ -31,23 +31,43 @@ $lastNameIsValid = isLastNameValid($lastName);
 $emailIsValid = isEmailValid($email);
 $commentIsValid = isCommentValid($comment);
 
+$firstNameFilled = isFirstEmpty($firstName);
+$lastNameFilled = isLastEmpty($lastName);
+$emailFilled = isEmailEmpty($email);
+$commentFilled = isCommentEmpty($comment);
 
 //Display error if not valid for first name, last name and email
 
 if (! $firstNameIsValid) {
-    $_SESSION['errors']['first_name'] = 'Please Enter a Longer First Name';
+    $_SESSION['errors']['first_name'] = 'Please Enter a Longer First Name!';
+}
+
+if (! $firstNameFilled){
+    $_SESSION['errors']['first_name'] = 'You Did not Enter a First Name!';
 }
 
 if (! $lastNameIsValid) {
-    $_SESSION['errors']['last_name'] = 'Please Enter a Longer Last Name';
+    $_SESSION['errors']['last_name'] = 'Please Enter a Longer Last Name!';
+}
+
+if (! $lastNameFilled){
+    $_SESSION['errors']['last_name'] = 'You Did Not Enter a Last Name!';
 }
 
 if (! $emailIsValid) {
-    $_SESSION['errors']['email'] = 'Please Enter a Valid Email';
+    $_SESSION['errors']['email'] = 'Please Enter a Valid Email Address!';
+}
+
+if (! $emailFilled){
+    $_SESSION['errors']['email'] = 'You Did Not Enter a Email!';
 }
 
 if (! $commentIsValid) {
-    $_SESSION['errors']['comment'] = 'Please Add More to Your Message';
+    $_SESSION['errors']['comment'] = 'Please Add More to Your Message!';
+}
+
+if (! $commentFilled){
+    $_SESSION['errors']['comment'] = 'You Did Not Enter a Message to Send!';
 }
 
 //if there are any errors - return back to the page

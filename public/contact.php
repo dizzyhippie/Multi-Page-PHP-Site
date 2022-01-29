@@ -36,7 +36,6 @@ $_SESSION['submission'] =[];
             <input type="text" placeholder="First Name" name="first_name" class="input-field" value="<?php echo $firstName; ?>">
             <span class="errors">
                     <?php echo $firstNameError; ?>
-                    <?php echo $firstNameEmpty; ?>
                 </span>
             <br>
             <input type="text" placeholder="Last Name" name="last_name" class="input-field" value="<?php echo $lastName; ?>">

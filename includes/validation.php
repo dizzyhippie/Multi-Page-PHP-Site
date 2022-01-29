@@ -6,10 +6,6 @@ function isFieldEmpty($input){
 }
 
 function isFirstNameValid($firstName){
-     //If its empty, DENY
-     if (isFieldEmpty($firstName)){
-        return false;
-    }
     //If first name is less than 3 letters, DENY
     if (strlen($firstName) < 2) {
         return false;
@@ -18,11 +14,14 @@ function isFirstNameValid($firstName){
     return true;
 }
 
-function isLastNameValid($lastName){
-    //If its empty, DENY
-    if (isFieldEmpty($lastName)){
+function isFirstEmpty($firstName){
+    if (isFieldEmpty($firstName)){
         return false;
     }
+    return true;
+}
+
+function isLastNameValid($lastName){
     //If last name is less than 3 letters, DENY
     if (strlen($lastName) < 2) {
         return false;
@@ -31,11 +30,14 @@ function isLastNameValid($lastName){
     return true;
 }
 
-function isEmailValid($email){
-    //If its empty, DENY
-    if (isFieldEmpty($email)){
+function isLastEmpty($lastName){
+    if (isFieldEmpty($lastName)){
         return false;
     }
+    return true;
+}
+
+function isEmailValid($email){
     //If email name is less than 3 letters, DENY
     if (strlen($email) < 6) {
         return false;
@@ -48,16 +50,26 @@ function isEmailValid($email){
     return true;
 }
 
-function isCommentValid($comment){
-    //If its empty, DENY
-    if (isFieldEmpty($comment)){
+function isEmailEmpty($email){
+    if (isFieldEmpty($email)){
         return false;
     }
+    return true;
+}
+
+function isCommentValid($comment){
     //If the message is less than 20 letters, false
     if (strlen($comment) < 20) {
         return false;
     }
     //Otherwise return true
+    return true;
+}
+
+function isCommentEmpty($comment){
+    if (isFieldEmpty($comment)){
+        return false;
+    }
     return true;
 }
 
